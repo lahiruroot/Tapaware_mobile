@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "736101288677",
+    "project_id": "tapaware-63b30",
+    "storage_bucket": "tapaware-63b30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736101288677:android:69bee210ccb75acf4ca20c",
+        "android_client_info": {
+          "package_name": "com.teamgreen.tap_aware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736101288677-rd1e3go0q02m862vkma5l11piktc524r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgc_7w-QY8iKr4npmyzQO0q6xqYI3kLHA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736101288677-rd1e3go0q02m862vkma5l11piktc524r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,7 +13,6 @@ class _HomeState extends State<Home> {
   final email = TextEditingController();
   final password = TextEditingController();
   final name = TextEditingController();
-  final nic = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   singUp() {
@@ -27,8 +26,7 @@ class _HomeState extends State<Home> {
         "latitude": "",
         "logitude": "",
         "massage": "",
-        "name": name.text,
-        "nic": nic.text
+        "name": name.text
       });
       Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
     });
@@ -42,7 +40,6 @@ class _HomeState extends State<Home> {
 
   //variables
   String _name;
-  String _nic;
   String _email;
   String _pass;
 
@@ -85,7 +82,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.all(11.0),
                   child: TextFormField(
-                    maxLength: 50,
+                    maxLength: 25,
                     decoration: InputDecoration(
                       hintText: "Name",
                       errorMaxLines: 1,
@@ -104,34 +101,11 @@ class _HomeState extends State<Home> {
                     },
                   ),
                 ),
-
-                Padding(
-                  padding: const EdgeInsets.all(11.0),
-                  child: TextFormField(
-                    maxLength: 10,
-                    decoration: InputDecoration(
-                      hintText: "National ID Number",
-                      errorMaxLines: 1,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0)),
-                    ),
-                    controller: nic,
-                    validator: (val) {
-                      if (val.isEmpty) {
-                        return 'NIC cannot be empty ';
-                      }
-                      return null;
-                    },
-                    onSaved: (val) {
-                      _nic = val;
-                    },
-                  ),
-                ),
                 //Email
                 Padding(
                   padding: const EdgeInsets.all(11.0),
                   child: TextFormField(
-                    maxLength: 50,
+                    maxLength: 25,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(20.0)),
@@ -174,13 +148,13 @@ class _HomeState extends State<Home> {
                   onPressed: () async {
                     if (_formKey.currentState.validate()) {
                       singUp();
-                      // {
-                      //   Navigator.push(context,
-                      //       MaterialPageRoute(builder: (context) => Login()));
-                      // }
+                      {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Login()));
+                      }
                     }
                   },
-                  child: Text('Sing Up'),
+                  child: Text('CONTAINED BUTTON'),
                 )
               ],
             ),
